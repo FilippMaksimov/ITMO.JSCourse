@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="../CSS_Styles/style01.css"/>
+        <link rel="stylesheet" href="../CSS_Styles/navigation_style.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="../Scripts/jquery.js">
+        </script>   
+        <title>Cinema View Главная</title>
+    </head>
+    <body class="theme">
+        <header id="main-header">
+            <script src="../Scripts/mode_style.js"></script>
+            <div id="navigation">
+                <li class="nav_li"><a class="nav_a" href="#">CinemaView</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/main_page.html">На главную</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/news.html">Новости</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/fav.html">Избраное</a></li>
+                    </ul>
+                </li>
+                <li class="nav_li"><a class="nav_a" href="#">Стиль сайта</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('light')">Светлая тема</a></li>
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('dark')">Темная тема</a></li>
+                    </ul>
+                </li>
+            </div>
+        </header>
+        <main class="main_grid">
+            <section id="search_filed">
+                <script src="../Scripts/search.js"></script>
+                <input type="text" id="search_input" onkeyup="searchFunction()" placeholder="Поиск...">
+                <input type="button" id="filter_btn" value="Фильтр">
+                <form name="f_form" class="filter_form">
+                    <p class="ch_label">Жанры:</p>
+                    <div id="checkboxes" class="filter_block">
+                        <p><input type="checkbox" name="genre_ch" value="comedy">Комедия</p>
+                        <p><input type="checkbox" name="genre_ch" value="fantastic">Фантастика</p>
+                        <p><input type="checkbox" name="genre_ch" value="horror">Ужасы</p>
+                        <p><input type="checkbox" name="genre_ch" value="triller">Триллер</p>
+                        <p><input type="checkbox" name="genre_ch" value="historical">Исторический</p>
+                    </div>
+                    <div id="checkboxes" class="filter_block">
+                        <p><input type="checkbox" name="genre_ch" value="action">Боевик</p>
+                        <p><input type="checkbox" name="genre_ch" value="detective">Детектив</p>
+                        <p><input type="checkbox" name="genre_ch" value="documental">Документальный</p>
+                        <p><input type="checkbox" name="genre_ch" value="melodrama">Мелодрама</p>
+                        <p><input type="checkbox" name="genre_ch" value="arts">Приключения</p>
+                    </div>
+                    <div id="other_items" class="filter_block" style="position: relative; left:40px;">
+                        <p id="buf_label_date" class="ch_label">Год выпуска 
+                            <select name="date" id="date_sel" style="width: 150px;">
+                                <option value="1990-1999">1990-1999</option>
+                                <option value="2000-2010">2000-2010</option>
+                                <option value="2011-2020">2011-2020</option>
+                                <option value="2021-2030">2021-2030</option>
+                                <option value="all">Все</option>
+                            </select>
+                        </p>
+                        <p>Страна выпуска 
+                            <select name="country" id="country_sel" style="width: 125px;">
+                                <option value="Ru">РФ</option>
+                                <option value="US">США</option>
+                                <option value="UK">Великобритания</option>
+                                <option value="Ge">Германия</option>
+                                <option value="Ca">Канада</option>
+                                <option value="all_c">Все страны</option>
+                            </select>                
+                        </p>
+                        <div id="radio_border">
+                            <p style="height: 10px;">Предназначен для лиц, старше 18 лет</p>
+                            <p><input type="radio" name="radio_btn" value="y_radio">Да</p>
+                            <p><input type="radio" name="radio_btn" value="n_radio">Нет</p>
+                        </div>
+                    </div>
+                    <p><input type="button" class="accept_btn" onclick="filterFunction()" value="Применить"></p>
+                </form>
+            </section>
+            <section class="left_part">
+                 <div class="new_films">
+                    <h3>Скоро в кино 2023 </h3>
+                    <arcticle class="vid">
+                        <p id="film_label">1. Торнадо</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/WgbiX5nQlHA" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">2. Жанна Дюбарри</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/wybcWR-ZB2A" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">3. Неудержимые</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/Oh6hSeN4Nag" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">4. Последнее путешествие «Деметра»</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/bMJPZWgu7m8" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">5. Голодные игры баллада о певчих птицах и змеях</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/RDE6Uz73A7g" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">6. Миссия невыполнима 7</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/kRXM8qlRh5g" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">7. Трансформеры 7: Восхождение Звероботов</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/Waw1weC19LY" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">8. Круче некуда</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/2na1B7xaa2g" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">9. Крэйвен-охотник</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/6jAQPmc644k" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">10. Капитан Марвел 2</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/m0SrG9kDAiI" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">11. Призраки в Венеции</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/Wccy6qizKxs" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">12. Космос. Смерть. Роботы</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/xE2SWFrkPWk" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">13. Ведьмак: 3 сезон</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/4NlD70Ic690" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">14. Астрал 5: Красная дверь</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/7D-5Zdp2hww" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">15. Заложники</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/FfoBdnE9jAw" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">16. Вверх 2: Свидание Карла</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/GFG0sO95JeQ" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                    <arcticle class="vid">
+                        <p id="film_label">17. Индиана Джонс 5: Колесо судьбы</p>
+                        <iframe class="trailer_video" 
+                        src="https://www.youtube.com/embed/CmEakXEoOs8" 
+                        frameborder="0"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </arcticle>
+                 </div>
+            </section>
+            <section id="films" class="right_part">
+                <script src="../Scripts/storageAPI.js"></script>
+                <ol class="film_list" id="film_id">
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_01"></div>
+                            <a href="https://www.kinopoisk.ru/film/2656/">
+                                <img class="preview_image" src="../Images/paty_element.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/2656/" class="link_style">Пятый элемент</a>
+                            <p class="date">1997</p>
+                            <p class="genre">Фантастика, Боевики</p>
+                            <p class="film_description">Зло уже приближается к Земле. А чтобы победить его, нужно только собрать вместе четыре элемента стихии и соединить их с неким пятым элементом.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="Ca US censored">
+                            <div class="fav" id="id_02"></div>
+                            <a href="https://www.kinopoisk.ru/film/453397/">
+                                <img class="preview_image" src="../Images/it_2.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/453397/" class="link_style">Оно</a>
+                            <p class="date">2017</p>
+                            <p class="genre">Ужасы, Детектив</p>
+                            <p class="film_description">Когда в городке Дерри штата Мэн начинают пропадать дети, несколько ребят сталкиваются со своими величайшими страхами — не только с группой школьных хулиганов, но со злобным клоуном Пеннивайзом, чьи проявления жестокости и список жертв уходят в глубь веков.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_03"></div>
+                            <a href="https://www.kinopoisk.ru/film/1267348/">
+                                <img class="preview_image" src="../Images/john_wick_4.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/1267348/" class="link_style">Джон Уик 4</a>
+                            <p class="date">2023</p>
+                            <p class="genre">Боевики, Триллер</p>
+                            <p class="film_description">Чтобы обрести свободу, киллер-изгой бросает вызов Правлению кланов. Самая зрелищная часть стильной экшен-саги</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_04"></div>
+                            <a href="https://www.kinopoisk.ru/film/195483/">
+                                <img class="preview_image" src="../Images/flash.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/195483/" class="link_style">Флэш</a>
+                            <p class="date">2023</p>
+                            <p class="genre">Фантастика, Боевики, Приключения</p>
+                            <p class="film_description">Барри Аллен использует свою суперскорость, чтобы изменить прошлое, но его попытка спасти свою семью создает мир без супергероев.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="Ru">
+                            <div class="fav" id="id_05"></div>
+                            <a href="https://www.kinopoisk.ru/film/4485219/">
+                                <img class="preview_image" src="../Images/snegir.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/4485219/" class="link_style">Снегирь</a>
+                            <p class="date">2023</p>
+                            <p class="genre">Триллеры</p>
+                            <p class="film_description">Рыболовное судно​ «Снегирь»​ — плавучий дом для банды морских бродяг. Они все разные, но есть кое-что общее: желание взять улов побогаче, хорошо заработать, вернуться на берег живыми. В команду вливаются два новичка​, Никита и Максим. Ледяные волны, работа на износ и компания хмурых моряков — не таким им виделся этот летний круиз. С видео для блога придется повременить и недовольство оставить при себе. Море изменчиво, и шторм — не главное испытание, которое ждет команду корабля.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_06"></div>
+                            <a href="https://www.kinopoisk.ru/film/2213/">
+                                <img class="preview_image" src="../Images/titanic.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/2213/" class="link_style">Титаник</a>
+                            <p class="date">1997</p>
+                            <p class="genre">Мелодрамы</p>
+                            <p class="film_description">В первом и последнем плавании шикарного «Титаника» встречаются двое. Пассажир нижней палубы Джек выиграл билет в карты, а богатая наследница Роза отправляется в Америку, чтобы выйти замуж по расчёту. Чувства молодых людей только успевают расцвести, и даже не классовые различия создадут испытания влюблённым, а айсберг, вставший на пути считавшегося непотопляемым лайнера.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US UK Ge">
+                            <div class="fav" id="id_07"></div>
+                            <a href="https://www.kinopoisk.ru/film/316376/">
+                                <img class="preview_image" src="../Images/western_front.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/316376/" class="link_style">На Западном фронте без перемен</a>
+                            <p class="date">2022</p>
+                            <p class="genre">Боевики, Исторический</p>
+                            <p class="film_description">Германская империя, 1917 год. Преисполненные патриотизмом 19-летний Пауль Боймер и его друзья-одноклассники отправляются добровольцами на фронт, где им предстоит испытать на себе ужасы Первой мировой войны.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_08"></div>
+                            <a href="https://www.kinopoisk.ru/film/329/">
+                                <img class="preview_image" src="../Images/shindler_list.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/329/" class="link_style">Список Шиндлера</a>
+                            <p class="date">1993</p>
+                            <p class="genre">Исторический</p>
+                            <p class="film_description">Фильм рассказывает реальную историю загадочного Оскара Шиндлера, члена нацистской партии, преуспевающего фабриканта, спасшего во время Второй мировой войны почти 1200 евреев.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="Ru">
+                            <div class="fav" id="id_09"></div>
+                            <a href="https://www.kinopoisk.ru/film/1045993/">
+                                <img class="preview_image" src="../Images/after_time.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/1045993/" class="link_style">Сквозь время</a>
+                            <p class="date">2022</p>
+                            <p class="genre">Фантастика</p>
+                            <p class="film_description">В ходе испытаний сверхскоростного самолета на новом источнике энергии изобретатель и бизнесмен Итан Блэйк и его брат Джейкоб оказываются на острове, не отмеченном на картах. Там они сталкиваются с таинственным туманом, в котором существует одновременно и прошлое, и будущее. Итану предстоит встретить своего отца, найти настоящую любовь и разгадать загадку острова, чтобы предотвратить грядущую катастрофу.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US UK censored">
+                            <div class="fav" id="id_10"></div>
+                            <a href="https://www.kinopoisk.ru/series/1227803/">
+                                <img class="preview_image" src="../Images/chernobyl.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/series/1227803/" class="link_style">Чернобыль (мини-сериал)</a>
+                            <p class="date">2019</p>
+                            <p class="genre">Исторический</p>
+                            <p class="film_description">26 апреля 1986 года в 1:23:45 во время проведения эксперимента по безопасности на Чернобыльской АЭС происходит крупнейшая техногенная катастрофа в истории человечества. Руководство ЧАЭС уверяет Кремль, что ситуация под контролем, и радиационный фон в норме, но по настоянию академика Легасова его вместе с зампредседателя Совета Министров Борисом Щербиной отправляют разобраться в происходящем на месте.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US Ca">
+                            <div class="fav" id="id_11"></div>
+                            <a href="https://www.kinopoisk.ru/film/430/">
+                                <img class="preview_image" src="../Images/shrek.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/430/" class="link_style">Шрэк</a>
+                            <p class="date">2001</p>
+                            <p class="genre">Приключения, Комедии</p>
+                            <p class="film_description">Жил да был в сказочном государстве большой зеленый великан по имени Шрэк. Жил он в гордом одиночестве в лесу, на болоте, которое считал своим. Но однажды злобный коротышка — лорд Фаркуад, правитель волшебного королевства, безжалостно согнал на Шрэково болото всех сказочных обитателей.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US UK">
+                            <div class="fav" id="id_12"></div>
+                            <a href="https://www.kinopoisk.ru/film/689/">
+                                <img class="preview_image" src="../Images/harry_potter_1.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/689/" class="link_style">Гарри Поттер и философский камень</a>
+                            <p class="date">2001</p>
+                            <p class="genre">Приключения</p>
+                            <p class="film_description">В одиннадцатый день рождения жизнь главного героя, Гарри Поттера, меняется. Странный гость, неожиданно появившийся на пороге, приносит письмо, из которого мальчик узнаёт, что на самом деле он - волшебник и зачислен в школу магии под названием Хогвартс. А уже через пару недель Гарри будет мчаться в поезде Хогвартс-экспресс навстречу новой жизни, где его ждут невероятные приключения.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US UK">
+                            <div class="fav" id="id_13"></div>
+                            <a href="https://www.kinopoisk.ru/film/4374/">
+                                <img class="preview_image" src="../Images/pirates_of_the_caribean.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/4374/" class="link_style">Пираты Карибского моря: Проклятие черной жемчужины</a>
+                            <p class="date">2003</p>
+                            <p class="genre">Приключения, Комедии</p>
+                            <p class="film_description">Жизнь харизматичного авантюриста, капитана Джека Воробья, полная увлекательных приключений, резко меняется, когда его заклятый враг капитан Барбосса похищает корабль Джека Черную Жемчужину, а затем нападает на Порт Ройал и крадет прекрасную дочь губернатора Элизабет Свонн.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US censored">
+                            <div class="fav" id="id_14"></div>
+                            <a href="https://www.kinopoisk.ru/film/462360/">
+                                <img class="preview_image" src="../Images/deadpool.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/462360/" class="link_style">Дэдпул</a>
+                            <p class="date">2016</p>
+                            <p class="genre">Боевики</p>
+                            <p class="film_description">Уэйд Уилсон — наёмник. Будучи побочным продуктом программы вооружённых сил под названием «Оружие X», Уилсон приобрёл невероятную силу, проворство и способность к исцелению. Но страшной ценой: его клеточная структура постоянно меняется, а здравомыслие сомнительно. Всё, чего хочет Уилсон, — держаться на плаву в социальной выгребной яме. Но течение в ней слишком быстрое.</p>
+                        </article>
+                    </li>
+                    <li class="list_item">
+                        <article class="US">
+                            <div class="fav" id="id_15"></div>
+                            <a href="https://www.kinopoisk.ru/film/468994/">
+                                <img class="preview_image" src="../Images/conjuring.jpg"/>
+                            </a>
+                            <a href="https://www.kinopoisk.ru/film/468994/" class="link_style">Заклятие</a>
+                            <p class="date">2013</p>
+                            <p class="genre">Ужасы</p>
+                            <p class="film_description">Эд и Лоррейн Уоррены — детективы, которые расследуют паранормальные дела. Однажды к ним обращается семья, страдающая от злого духа. Уоррены, вынужденные сражаться с могущественной демонической сущностью, сталкиваются с самым пугающим случаем в своей жизни.</p>
+                        </article>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                       <tr>
+                        <th>Жанр</th>
+                        <th>Количество на киносайте</th>
+                       </tr> 
+                    </thead>
+                    <tfoot>
+                        <tr>
+                           <td>Всего фильмов</td> 
+                           <td>Всего фильмов(место)</td>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Комедии</td>
+                                <td>Комедии(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Боевики</td>
+                                <td>Боевики(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Триллеры</td>
+                                <td>Триллеры(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Ужасы</td>
+                                <td>Ужасы(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Мелодрамы</td>
+                                <td>Мелодрамы(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Детектив</td>
+                                <td>Детектив(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Исторический</td>
+                                <td>Исторический(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Документальный</td>
+                                <td>Документальный(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Фантастика</td>
+                                <td>Фантастика(место)</td>
+                            </tr>
+                            <tr>
+                                <td>Приключения</td>
+                                <td>Приключения(место)</td>
+                            </tr>
+                        </tbody>
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <center style="font-weight: 500;">
+                &copy; 2023
+                <br /><p style="font-weight: 500;">CinemaView. Not a comerical product</p>
+            </center>
+        </footer>
+    </body>
+</html>

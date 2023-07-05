@@ -1,0 +1,124 @@
+#main_div {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: 10px;
+}
+
+.div_block {
+    display:inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: 10px;
+}
+
+#r_news {
+    width: 369px;
+    vertical-align: top;
+}
+
+#l_news {
+    display: inline-block;
+    vertical-align: top;
+    width: 369px;
+}
+article {
+    z-index: 3;
+    display:inline-block;
+    width: 140px;
+    height: 140px;
+    padding: 15px;
+    margin: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#biggest {
+    width: 325px;
+    height: 325px;
+    border: 1px solid black;
+}
+
+#biggest a {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#lenta {
+    position: absolute;
+    left: 860px;
+    top: 230px;
+    width: 190px;
+}
+
+.lent_news {
+    height: 120px;
+    width: 300px;
+    padding: 10px;
+    background: none !important;
+    border: none !important;
+    border-radius: 0;
+    border-bottom: 1px solid black !important;
+}
+
+h3 {
+    font-style: italic;
+    margin: 10px;
+}
+
+.news_img {
+    height: 100px;
+    width: 140px;
+    background-size: cover !important;
+    background-position: center  !important;
+}
+
+
+.lent_news a p {
+    font-size: 16px;
+    color: black;
+
+    &:hover {
+        color: orange;
+    }
+}
+
+.general_news a p {
+    position: relative;
+    top: 10px;
+    left: 1px;
+    color:aliceblue;
+
+}
+
+.general_news a div {
+    position: relative;
+    top: -29px;
+    right: 15px;
+    height: 171px;
+    width: 171px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.dark #main_div #lenta h3, .dark #main_div #lenta article a p {
+    color: aliceblue;
+} 
+
+.dark #main_div #lenta article a p {
+    &:hover {
+        color: orange;
+    }
+}
+
+
+

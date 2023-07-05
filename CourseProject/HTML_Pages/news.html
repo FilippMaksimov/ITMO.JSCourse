@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="../CSS_Styles/style01.css"/>
+        <link rel="stylesheet" href="../CSS_Styles/navigation_style.css"/>
+        <link rel="stylesheet" href="../CSS_Styles/news_style.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="../Scripts/jquery.js">
+        </script>   
+        <title>Cinema View Новости</title>
+    </head>
+    <body class="theme">
+        <header id="main-header">
+            <script src="../Scripts/mode_style.js"></script>
+            <div id="navigation">
+                <li class="nav_li"><a class="nav_a" href="#">CinemaView</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/main_page.html">На главную</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/news.html">Новости</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/fav.html">Избраное</a></li>
+                    </ul>
+                </li>
+                <li class="nav_li"><a class="nav_a" href="#">Стиль сайта</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('light')">Светлая тема</a></li>
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('dark')">Темная тема</a></li>
+                    </ul>
+                </li>
+            </div>
+        </header>
+        <main>
+            <div id="main_div">
+            <div id="r_news" class="div_block">
+                <article class="general_news" id="biggest" style="background-image: url('../Images/News_Posters/big_new.jpg')">
+                    <a href="https://www.kinopoisk.ru/media/news/4008054/" class="vis">
+                        <p>Индустрия</p>
+                        <p>Что известно и фильме Луки Гуаданьино, который заставил понервничать Тома Холланда</p>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/news_top.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4008033/" class="vis">
+                        <div>
+                            <p>Сериалы</p>
+                            <p>Что посмотреть дома: 3 сезон "Ведьмака"</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/focus.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007815/" class="vis">
+                        <div>
+                            <p>В фокусе</p>
+                            <p>"Укрытие": каким получился первый сезон постапокалиптического триллера с Ребекой...</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/how_to.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007815/" class="vis">
+                        <div>
+                            <p>Как это смотреть</p>
+                            <p>От Хичкока до Хемсворта: самые крутые сцены и фильмы, снятые одним каром</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/comming_soon.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/news/4008047/" class="vis">
+                        <div>
+                            <p>Скоро выйдет!</p>
+                            <p>"Смогу я снова стать человеком?". Вышел трейлер второго сезона "Пищеблока"</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div id="l_news" class="div_block">
+                <article class="general_news" style="background-image: url('../Images/News_Posters/richi.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/video/4008042/" class="vis">
+                        <div>
+                            <p>Индустрия</p>
+                            <p>Как снять фильм в стиле Гая Ричи</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/games.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4008041/" class="vis">
+                        <div>
+                            <p>Игры</p>
+                            <p>Промежуточные итоги: 10 лучших игр первой половины 2023 года</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/dune_2.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007801/" class="vis">
+                        <div>
+                            <p>Трейлеры</p>
+                            <p>Что известно о "Дюне 2" и ждать ли трилогию?</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/red_dead_2.jpg')">
+                    <a href="https://www.kinopoisk.ru/media/article/4007975/" class="vis">
+                        <div>
+                            <p>Игры</p>
+                            <p>Стримим Red Dead Redemption 2 со звездой «Короля и Шута» Костей Плотниковым</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/transformers.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007982/" class="vis">
+                        <div>
+                            <p>Как это смотреть</p>
+                            <p>"Трансформеры": какие из них лучше?</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/serial_2.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007976/" class="vis">
+                        <div>
+                            <p>Сериалы</p>
+                            <p>Сериал «Основано на реальных событиях»: черная комедия про убийства в другом здании</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/hero.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4007972/" class="vis">
+                        <div>
+                            <p>Портрет героя</p>
+                            <p>За что мы любим Джеки Чана и почему к нему есть вопросики</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="general_news" style="background-image: url('../Images/News_Posters/industry.jpg');">
+                    <a href="https://www.kinopoisk.ru/media/article/4008011/" class="vis">
+                        <div>
+                            <p>Индустрия</p>
+                            <p>«Кумир» — одна из самых громких неудач HBO за последние годы. Что пошло не так?</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div id="lenta" class="div-block">
+                <h3>Новости</h3>
+                <article class="lent_news">
+                    <a href="https://www.kinopoisk.ru/media/news/4008046/">
+                        <p>Голливуд продолжает бастовать! Теперь к сценаристам могут присоединиться актеры, и тогда пострадает Кристофер Нолан</p>
+                        <p class="pub_date">30 июня 2023</p>
+                    </a>
+                </article>
+                <article class="lent_news">
+                    <a href="https://www.kinopoisk.ru/media/article/4008011/">
+                        <p>«Одни из нас», «Очень странные дела» и «Блэйд»: какие проекты пострадали от забастовки сценаристов</p>
+                        <p class="pub_date">26 июня 2023</p>
+                    </a>
+                </article>
+                <article class="lent_news">
+                    <a href="https://www.kinopoisk.ru/media/article/4008011/">
+                        <p>Отрывок из «Ведьмака» и тизер «Ван-Писа»: Что показали на Netflix Tudum</p>
+                        <p class="pub_date">18 июня 2023</p>
+                    </a>
+                </article>
+            </div>
+            </div>
+        </main>
+    </body>
+</html>

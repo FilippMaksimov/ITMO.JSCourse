@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+#navigation {
+    background-color: #444;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_li {
+    list-style: none;
+    float: left;
+    width: 140px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: serif;
+    color: #fff;
+    background-color: #444;
+    display: block;
+    margin: 3px;
+    padding: 15px;
+    text-align: center;
+
+    &:hover {
+        background-color: #ccc;
+        color: #444;
+    }
+}

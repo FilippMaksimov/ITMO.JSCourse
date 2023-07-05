@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="../CSS_Styles/style01.css"/>
+        <link rel="stylesheet" href="../CSS_Styles/navigation_style.css"/>
+        <link rel="stylesheet" href="../CSS_Styles/fav_page_style.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="../Scripts/jquery.js"></script>
+        <script src="../Scripts/storageAPI.js"></script>  
+        <title>Cinema View Избраное</title>
+    </head>
+    <body class="theme">
+        <header id="main-header">
+            <script src="../Scripts/mode_style.js"></script>
+            <div id="navigation">
+                <li class="nav_li"><a class="nav_a" href="#">CinemaView</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/main_page.html">На главную</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/news.html">Новости</a></li>
+                        <li class="nav_li"><a class="nav_a" href="../HTML_Pages/fav.html">Избраное</a></li>
+                    </ul>
+                </li>
+                <li class="nav_li"><a class="nav_a" href="#">Стиль сайта</a>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('light')">Светлая тема</a></li>
+                        <li class="nav_li"><a class="nav_a" href="#" onclick="colorMode('dark')">Темная тема</a></li>
+                    </ul>
+                </li>
+            </div>
+        </header>
+        <main class="main_grid">
+            <script src="../Scripts/get_from_storage.js"></script> 
+        </main>
+        <footer>
+            <center style="font-weight: 500;">
+                &copy; 2023
+                <br /><p style="font-weight: 500;">CinemaView. Not a comerical product</p>
+            </center>
+        </footer>
+    </body>
+</html>

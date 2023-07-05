@@ -1,0 +1,54 @@
+.film_container {
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 5px;
+    width: 25%;
+    min-height: 445px;
+    max-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+.fav_preview {
+    height: 100px;
+    width: 40px;
+    background-size: cover !important;
+    background-position: center  !important;
+}
+
+p {
+    color: beige;
+    font-weight: 500;
+}
+
+.fav {
+    position: relative;
+    left: 93%;
+    top: 10px;
+}
+
+.text_block {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.link_fav {
+    text-decoration: none;
+    color: red;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+}
+
+main h2 {
+    height: 400px;
+    padding-top: 30px;
+    padding-left: 480px;
+}
+
+.dark main h2 {
+    color: aliceblue;
+}
